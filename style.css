@@ -1,43 +1,96 @@
 /* style.css */
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body, html {
+    padding: 0;
     margin: 0;
-    background-color: #f4f4f4;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #ffffff; /* White background */
 }
 
 #calorie-calculator {
-    background-color: white;
+    color: #000; /* Black text color */
+    max-width: 340px; /* Adjusted width for a tighter layout */
+    margin: 40px auto; /* More vertical space */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Softer shadow for a cleaner look */
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px; /* More space after the title */
 }
 
 .form-group {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
+    font-size: 16px; /* Slightly larger label text */
+    font-weight: bold;
+    margin-bottom: 8px; /* Reduced space between label and input */
 }
 
 .form-group input,
 .form-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
+    padding: 8px; /* Adjusted padding for a less tall appearance */
+    border: 1px solid #000; /* Slimmer borders for inputs */
     border-radius: 4px;
+    font-size: 16px; /* Matching font size for inputs and labels */
+    font-weight: light; /* Helvetica light for inputs */
+    background-color: #fff; /* Ensuring background is white */
+    color: #000; /* Text color black */
 }
 
 button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
+    width: auto; /* Button width auto for natural size */
+    padding: 8px 20px; /* Adjusted padding for consistency with input fields */
+    font-size: 16px; /* Larger font size for button */
+    border-radius: 4px; /* Consistent border-radius with input fields */
+    margin-top: 20px; /* More space above the button */
+    font-weight: bold; /* Helvetica bold for button text */
+}
+
+#result {
+    font-size: 16px; /* Uniform text size for results */
+    text-align: center; /* Center-aligned results text */
+    margin-top: 20px;
+    padding: 8px; /* Adjusted padding for result box */
+    border: 1px solid #000; /* Black border for results box */
     border-radius: 4px;
-    cursor: pointer;
+    font-weight: bold; /* Helvetica bold for results */
+}
+
+/* Adjusting height for select elements */
+select {
+    height: auto; /* Auto height for better fit on content */
+    padding: 8px; /* Adjusted padding for a less tall appearance */
+}
+
+/* Custom styles for buttons and selects */
+button, select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+button {
+    background-color: #000; /* Black button */
+    color: #fff; /* White text */
+    border: none; /* No border for buttons */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    #calorie-calculator {
+        box-shadow: none; /* Remove shadow on smaller screens */
+        margin: 20px; /* Less margin on smaller screens */
+    }
+}
+
+/* Specific styles for select elements to override default fonts */
+select {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
